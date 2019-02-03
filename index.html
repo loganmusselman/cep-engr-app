@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CEP Engineering Application</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Raleway|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="corner-popup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="corner-popup.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="headerName">John Musselman</h1>
+      <img class="profile" src="images/profile.jpg" alt="family photo" />
+      <h2 class="headerSubTitle">Developer In Training</h2>
+      <p class="arrow"><i class="fas fa-arrow-down fa-3x"></i></p>
+      <p class="scroll">Scroll down to see more.</p>
+    </header>
+
+    <section id="sectionList">
+      <ul class="list">
+        <li id="task" class="firstName">First Name</li>
+        <li id="task" class="lastName">Last Name</li>
+        <li id="task" class="jobTitle">Job Title</li>
+        <li id="task" class="homeOffice">Home Office</li>
+        <li id="task" class="tellMeMore">Tell Me More</li>
+      </ul>
+    </section>
+    <section class="jokeContainer">
+      <section class="jokeDescription">
+        <h2 class="jokeDescriptionTitle">Dad Joke API</h2>
+        <p class="jokeDescriptionWords">By clicking this button, you will be able to acces the API from <a href="https://icanhazdadjoke.com/api">icanhazdadjoke.com</a> to retrieve a random Dad Joke! Have fun!</p>
+        <p class="jokeDescriptionWords2">Please keep the following in mind when receiving your "Dad Joke".</p>
+        <ul class="jokeDescriptionWords3">
+          <li>These jokes are not funny.</li>
+          <li>I did not write these jokes.</li>
+          <li>I did spend quite a bit of time reading through them.</li>
+          <li>Yes, I actually laughed at a couple.</li>
+        </ul>
+      </section>
+
+      <section id="jokeSection">
+        <button class="activator" onclick="joke()">Click this button for a nice joke</button>
+      </section>
+    </section>
+
+    <section class="weatherSection">
+      <h2 class="weatherDescriptionTitle"">Sunrise-Sunset API</h2>
+      <p class="weatherDescriptionWords">This API can be found at <a href="https://sunrise-sunset.org/api">https://sunrise-sunset.org/api</a>. This API uses the HTML Geolocation API information to determine the approximate local time of sunrise and sunset.</p>
+      <button class="weatherButton" onclick="fetchSunMoon()">Get Sun Information</button>
+    </section>
+
+    <footer>
+      <h3>John Musselman, CEP Engineering Application</h3>
+    </footer>
+    <script>
+        $('body').cornerpopup({
+        'variant': 8,
+        'shadow': 1,
+        'slide': 1,
+        'header': '<h3 class="popheader">Ready for some shut-eye?<i class="far fa-moon"></i></h3>',
+        'font': "'Raleway', sans-serif",
+        'colors': 'rgba(23, 90, 6, 1.0)',
+        'text2': '<p>You will need to allow this web page to access your location settings if you wish to use the <a href="https://sunrise-sunset.org/api">Sunrise and Sunset API</a>.'
+
+        });
+    </script>
+    <script src="init.js"></script>
+  </body>
+</html>
